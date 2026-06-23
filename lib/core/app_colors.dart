@@ -7,4 +7,7 @@ abstract final class AppColors {
   static const warning = Color(0xFFF59E0B);
   static const danger = Color(0xFFEF4444);
   static const surface = Color(0xFFF8FAFC);
+  static const bitcoin = Color(0xFFF7931A);
+  static const ethereum = Color(0xFF627EEA);
+  static const solana = Color(0xFF9945FF);
 }

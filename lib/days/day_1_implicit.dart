@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/app_colors.dart';
 import '../core/app_spacing.dart';
 import '../core/app_sizes.dart';
+import '../core/app_durations.dart';
 
 class Day1ImplicitPage extends StatefulWidget {
   const Day1ImplicitPage({super.key});
@@ -58,7 +59,7 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                     const SizedBox(height: AppSpacing.s8),
                     Center(
                       child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 500),
+                        duration: AppDurations.medium,
                         width: _containerExpanded ? AppSizes.xl : AppSizes.lg,
                         height: _containerExpanded ? AppSizes.xl : AppSizes.lg,
                         decoration: BoxDecoration(
@@ -104,7 +105,7 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                     const SizedBox(height: AppSpacing.s8),
                     Center(
                       child: AnimatedOpacity(
-                        duration: const Duration(milliseconds: 500),
+                        duration: AppDurations.medium,
                         opacity: _isVisible ? 1 : 0.2,
                         child: const FlutterLogo(size: AppSizes.md),
                       ),
@@ -144,7 +145,7 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                     SizedBox(
                       height: AppSpacing.s40 * 3,
                       child: AnimatedAlign(
-                        duration: const Duration(milliseconds: 500),
+                        duration: AppDurations.medium,
                         alignment: _alignRight
                             ? Alignment.centerRight
                             : Alignment.centerLeft,
@@ -188,7 +189,7 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                       child: Stack(
                         children: [
                           AnimatedPositioned(
-                            duration: const Duration(milliseconds: 500),
+                            duration: AppDurations.medium,
                             left: _positionMoved ? AppSizes.xl : AppSizes.xs,
                             top: AppSpacing.s40,
                             child: Container(
@@ -234,7 +235,7 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                     const Text('Плавное переключение между двумя разными виджетами.'),
                     Center(
                       child: AnimatedCrossFade(
-                        duration: const Duration(milliseconds: 500),
+                        duration: AppDurations.medium,
                         firstChild: const FlutterLogo(size: AppSizes.lg),
                         secondChild: const Icon(
                           Icons.favorite,
@@ -266,4 +267,4 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
       ),
     );
   }
-} 
+}
