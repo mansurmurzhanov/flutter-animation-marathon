@@ -6,9 +6,7 @@ class Day5SwitcherPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Day 5 - Switcher Animations'),
-      ),
+      body: Center(child: Text('Day 5 - Switcher Animations')),
     );
   }
 }

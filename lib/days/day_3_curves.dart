@@ -24,9 +24,7 @@ class _Day3CurvesPageState extends State<Day3CurvesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Day 3 — Tween + Curves'),
-      ),
+      appBar: AppBar(title: const Text('Day 3 — Tween + Curves')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(AppSpacing.s16),
         child: Column(
@@ -52,9 +50,7 @@ class _Day3CurvesPageState extends State<Day3CurvesPage> {
             const SizedBox(height: AppSpacing.s16),
             Center(
               child: ConstrainedBox(
-                constraints: const BoxConstraints(
-                  maxWidth: 900,
-                ),
+                constraints: const BoxConstraints(maxWidth: 900),
                 child: LayoutBuilder(
                   builder: (context, constraints) {
                     return GridView.count(
@@ -74,7 +70,8 @@ class _Day3CurvesPageState extends State<Day3CurvesPage> {
                         _CurveCard(
                           key: ValueKey('easein_$_animationKey'),
                           title: 'EaseIn',
-                          description: 'Медленный старт и постепенное ускорение.',
+                          description:
+                              'Медленный старт и постепенное ускорение.',
                           curve: Curves.easeIn,
                           color: AppColors.success,
                         ),
@@ -132,20 +129,19 @@ class _CurveCard extends StatelessWidget {
               Text(
                 title,
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: color,
-                    ),
+                  fontWeight: FontWeight.bold,
+                  color: color,
+                ),
               ),
               const SizedBox(height: AppSpacing.s4),
-              Text(
-                description,
-              ),
+              Text(description),
               const Spacer(),
               SizedBox(
                 height: AppSizes.iconContainerHeight,
                 child: LayoutBuilder(
                   builder: (context, constraints) {
-                    final maxDistance = constraints.maxWidth - AppSizes.heartTravelPadding;
+                    final maxDistance =
+                        constraints.maxWidth - AppSizes.heartTravelPadding;
 
                     return TweenAnimationBuilder<double>(
                       tween: Tween(begin: 0.0, end: maxDistance),

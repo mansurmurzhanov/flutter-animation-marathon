@@ -5,10 +5,6 @@ class Day6CustomPaintPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Day 6 - Custom Paint'),
-      ),
-    );
+    return const Scaffold(body: Center(child: Text('Day 6 - Custom Paint')));
   }
 }

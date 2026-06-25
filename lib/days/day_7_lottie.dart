@@ -6,9 +6,7 @@ class Day7LottiePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Day 7 - Lottie Animations'),
-      ),
+      body: Center(child: Text('Day 7 - Lottie Animations')),
     );
   }
 }

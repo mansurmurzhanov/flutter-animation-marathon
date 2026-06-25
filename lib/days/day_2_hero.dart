@@ -25,29 +25,30 @@ class Day2HeroPage extends StatelessWidget {
         id: 'btc',
         name: 'Bitcoin',
         price: '\$104,000',
-        description: 'First cryptocurrency and the largest by market capitalization.',
+        description:
+            'First cryptocurrency and the largest by market capitalization.',
         color: AppColors.bitcoin,
       ),
       const Coin(
         id: 'eth',
         name: 'Ethereum',
         price: '\$3,500',
-        description: 'Smart-contract platform powering thousands of applications.',
+        description:
+            'Smart-contract platform powering thousands of applications.',
         color: AppColors.ethereum,
       ),
       const Coin(
         id: 'sol',
         name: 'Solana',
         price: '\$180',
-        description: 'High-performance blockchain focused on speed and scalability.',
+        description:
+            'High-performance blockchain focused on speed and scalability.',
         color: AppColors.solana,
       ),
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Day 2 — Hero Transitions'),
-      ),
+      appBar: AppBar(title: const Text('Day 2 — Hero Transitions')),
       body: Padding(
         padding: const EdgeInsets.all(AppSpacing.s16),
         child: Column(
@@ -67,7 +68,8 @@ class Day2HeroPage extends StatelessWidget {
             Expanded(
               child: ListView.separated(
                 itemCount: coins.length,
-                separatorBuilder: (context, index) => const SizedBox(height: AppSpacing.s12),
+                separatorBuilder: (context, index) =>
+                    const SizedBox(height: AppSpacing.s12),
                 itemBuilder: (context, index) {
                   final coin = coins[index];
 
@@ -75,18 +77,19 @@ class Day2HeroPage extends StatelessWidget {
                     child: ListTile(
                       leading: Hero(
                         tag: coin.id,
-                        flightShuttleBuilder: (
-                          flightContext,
-                          animation,
-                          flightDirection,
-                          fromHeroContext,
-                          toHeroContext,
-                        ) {
-                          return FadeTransition(
-                            opacity: animation,
-                            child: toHeroContext.widget,
-                          );
-                        },
+                        flightShuttleBuilder:
+                            (
+                              flightContext,
+                              animation,
+                              flightDirection,
+                              fromHeroContext,
+                              toHeroContext,
+                            ) {
+                              return FadeTransition(
+                                opacity: animation,
+                                child: toHeroContext.widget,
+                              );
+                            },
                         child: CircleAvatar(
                           backgroundColor: coin.color,
                           child: Text(coinSymbol(coin.id)),
@@ -134,17 +137,12 @@ class Coin {
 class CoinDetailPage extends StatelessWidget {
   final Coin coin;
 
-  const CoinDetailPage({
-    super.key,
-    required this.coin,
-  });
+  const CoinDetailPage({super.key, required this.coin});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(coin.name),
-      ),
+      appBar: AppBar(title: Text(coin.name)),
       body: Padding(
         padding: const EdgeInsets.all(AppSpacing.s16),
         child: Column(
@@ -163,22 +161,11 @@ class CoinDetailPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: AppSpacing.s24),
-            Text(
-              coin.name,
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            Text(coin.name, style: Theme.of(context).textTheme.headlineMedium),
             const SizedBox(height: AppSpacing.s8),
-            Text(
-              coin.price,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
+            Text(coin.price, style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: AppSpacing.s24),
-            Center(
-              child: Text(
-                coin.description,
-                textAlign: TextAlign.center,
-              ),
-            ),
+            Center(child: Text(coin.description, textAlign: TextAlign.center)),
           ],
         ),
       ),

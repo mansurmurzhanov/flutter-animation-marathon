@@ -9,4 +9,5 @@ abstract final class AppSizes {
   static const double iconContainerHeight = 40;
   static const double heartSize = 40;
   static const double heartTravelPadding = 36;
-} 
+  static const double heartDemoSize = 120;
+}

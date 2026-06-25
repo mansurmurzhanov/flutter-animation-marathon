@@ -34,9 +34,7 @@ class HomePage extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Animation Marathon'),
-      ),
+      appBar: AppBar(title: const Text('Animation Marathon')),
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context, index) {
@@ -48,9 +46,7 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (_) => pages[index],
-                  ),
+                  MaterialPageRoute(builder: (_) => pages[index]),
                 );
               },
             ),

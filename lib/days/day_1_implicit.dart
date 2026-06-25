@@ -22,9 +22,7 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Day 1 — Implicit Animations'),
-      ),
+      appBar: AppBar(title: const Text('Day 1 — Implicit Animations')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(AppSpacing.s16),
         child: Column(
@@ -55,7 +53,9 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                         color: AppColors.primary,
                       ),
                     ),
-                    const Text('Изменяем размер, цвет и скругление. Flutter анимирует переход автоматически.'),
+                    const Text(
+                      'Изменяем размер, цвет и скругление. Flutter анимирует переход автоматически.',
+                    ),
                     const SizedBox(height: AppSpacing.s8),
                     Center(
                       child: AnimatedContainer(
@@ -63,7 +63,9 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                         width: _containerExpanded ? AppSizes.xl : AppSizes.lg,
                         height: _containerExpanded ? AppSizes.xl : AppSizes.lg,
                         decoration: BoxDecoration(
-                          color: _containerExpanded ? AppColors.success : AppColors.primary,
+                          color: _containerExpanded
+                              ? AppColors.success
+                              : AppColors.primary,
                           borderRadius: BorderRadius.circular(
                             _containerExpanded ? AppSpacing.s32 : AppSpacing.s8,
                           ),
@@ -101,7 +103,9 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                         color: AppColors.primary,
                       ),
                     ),
-                    const Text('Плавное изменение прозрачности между двумя состояниями.'),
+                    const Text(
+                      'Плавное изменение прозрачности между двумя состояниями.',
+                    ),
                     const SizedBox(height: AppSpacing.s8),
                     Center(
                       child: AnimatedOpacity(
@@ -141,7 +145,9 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                         color: AppColors.primary,
                       ),
                     ),
-                    const Text('Плавное перемещение виджета между разными Alignment.'),
+                    const Text(
+                      'Плавное перемещение виджета между разными Alignment.',
+                    ),
                     SizedBox(
                       height: AppSpacing.s40 * 3,
                       child: AnimatedAlign(
@@ -232,7 +238,9 @@ class _Day1ImplicitPageState extends State<Day1ImplicitPage> {
                         color: AppColors.primary,
                       ),
                     ),
-                    const Text('Плавное переключение между двумя разными виджетами.'),
+                    const Text(
+                      'Плавное переключение между двумя разными виджетами.',
+                    ),
                     Center(
                       child: AnimatedCrossFade(
                         duration: AppDurations.medium,
