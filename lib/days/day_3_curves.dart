@@ -37,7 +37,8 @@ class _Day3CurvesPageState extends State<Day3CurvesPage> {
                 borderRadius: BorderRadius.circular(AppSpacing.s12),
               ),
               child: const Text(
-                'TweenAnimationBuilder позволяет анимировать значения без AnimationController. Curves меняют характер движения и сильно влияют на восприятие интерфейса.',
+                'TweenAnimationBuilder\n\n'
+                'Позволяет анимировать значения без AnimationController. Curves меняют характер движения и сильно влияют на восприятие интерфейса.',
               ),
             ),
             const SizedBox(height: AppSpacing.s24),

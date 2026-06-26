@@ -73,7 +73,8 @@ class _Day4ControllerPageState extends State<Day4ControllerPage>
                 children: [
                   SizedBox(height: AppSpacing.s8),
                   Text(
-                    'AnimationController даёт полный контроль '
+                    'AnimationController\n\n'
+                    'Даёт полный контроль '
                     'над анимацией. '
                     'Вы сами управляете запуском, '
                     'остановкой и повторением.',
