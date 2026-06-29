@@ -66,7 +66,7 @@ class _Day4ControllerPageState extends State<Day4ControllerPage>
               padding: const EdgeInsets.all(AppSpacing.s16),
               decoration: BoxDecoration(
                 color: AppColors.surface,
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(AppSpacing.s16),
               ),
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -225,29 +225,44 @@ class _Day5SwitcherPageState extends State<Day5SwitcherPage> {
       ),
       itemCount: _animatedItems.length,
       itemBuilder: (context, index) {
-        return Card(
-          child: Stack(
-            children: [
-              Center(
-                child: Text(
-                  _animatedItems[index],
-                  style: Theme.of(context).textTheme.titleMedium,
-                  textAlign: TextAlign.center,
-                ),
+        return TweenAnimationBuilder<double>(
+          key: ValueKey(_animatedItems[index]),
+          tween: Tween(begin: 0.0, end: 1.0),
+          duration: AppDurations.medium,
+          curve: Curves.easeOut,
+          builder: (context, value, child) {
+            return Transform.scale(
+              scale: 0.9 + (0.1 * value),
+              child: Opacity(
+                opacity: value,
+                child: child,
               ),
-              Positioned(
-                top: 4,
-                right: 4,
-                child: IconButton(
-                  icon: const Icon(Icons.delete_outline),
-                  onPressed: () {
-                    setState(() {
-                      _animatedItems.removeAt(index);
-                    });
-                  },
+            );
+          },
+          child: Card(
+            child: Stack(
+              children: [
+                Center(
+                  child: Text(
+                    _animatedItems[index],
+                    style: Theme.of(context).textTheme.titleMedium,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
-              ),
-            ],
+                Positioned(
+                  top: 4,
+                  right: 4,
+                  child: IconButton(
+                    icon: const Icon(Icons.delete_outline),
+                    onPressed: () {
+                      setState(() {
+                        _animatedItems.removeAt(index);
+                      });
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },

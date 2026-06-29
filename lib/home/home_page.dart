@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../core/app_spacing.dart';
 
 import '../days/day_1_implicit.dart';
 import '../days/day_2_hero.dart';
@@ -39,7 +40,7 @@ class HomePage extends StatelessWidget {
         itemCount: items.length,
         itemBuilder: (context, index) {
           return Card(
-            margin: const EdgeInsets.all(12),
+            margin: const EdgeInsets.all(AppSpacing.s12),
             child: ListTile(
               title: Text(items[index]),
               trailing: const Icon(Icons.arrow_forward_ios),
